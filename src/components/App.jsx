@@ -9,7 +9,6 @@ import Button from "./Button";
 const App = () => {
     const stored = localStorage.getItem("isDarkMode");
     const [isDarkMode, setIsDarkMode] = useState(stored === "true");
-
     const handleSwitchTheme = useCallback(() => {
         setIsDarkMode(!isDarkMode);
         localStorage.setItem("isDarkMode", !isDarkMode);
